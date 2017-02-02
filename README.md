@@ -1,4 +1,3 @@
-# library
 FreeStore V0
 ----------
 
