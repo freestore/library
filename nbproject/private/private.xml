@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/freestore/abd/ABDFreeStoreServer.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/dynastore/wso/Register.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/dynastore/wso/WeakSnapshotObject.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/dynastore/DynaStoreReplica.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/freestore/FreeStoreReplica.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/dynastore/messages/DynaStoreMessage.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/dynastore/messages/WSOMessage.java</file>
+            <file>file:/home/eduardo/NetBeansProjects/DynamicQuorums/src/abd/ABDClient.java</file>
+        </group>
+    </open-files>
+</project-private>
