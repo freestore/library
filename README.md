@@ -5,12 +5,17 @@ Java implementation of FreeStore
 
 To be completed
 
+
+
 ------------- How to run FreeStore -----------------------
 
 To be completed
 
 
+
 ----- Additional information and publications ------
+
+To be completed
 
 
 ----- Other Implementations ------
