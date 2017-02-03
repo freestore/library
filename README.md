@@ -44,7 +44,7 @@ You can run the microbenckmarks demonstration by executing the following command
     - ./runABDFreeStoreServer.sh 3 live
     
 - Start the client
-  - ./runABDFreeStoreClientMicrobenckmarks.sh <num. threads/clients> <init process id> <number of operations> <value size> <interval>
+  - ./runABDFreeStoreClientMicrobenckmarks.sh \<num. threads/clients> \<init process id> \<number of operations> \<value size> \<interval>
       - e.g.: ./runABDFreeStoreClientMicrobenckmarks.sh 5 7001 10 50 0 will start 5 clients (7001, 7002, 7003, 7004 and 7005) that will execute 5 operations to write/read (the client 7001 executes write operations while the others read the value from the register) a value of 50 bytes from the registers without any delay between the invocations.
 
 
