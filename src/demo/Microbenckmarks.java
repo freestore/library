@@ -103,7 +103,7 @@ public class Microbenckmarks {
 
             System.out.println("Executing experiment for " + numberOfOps / 2 + " ops");
 
-            for (int i = 0; i < numberOfOps / 2; i++) {
+            for (int i = 0; i < numberOfOps ; i++) {
                 long last_send_instant = System.nanoTime();
                 
                 if(this.id == initId){
