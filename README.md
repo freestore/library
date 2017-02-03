@@ -31,6 +31,9 @@ Important tip #1: Always provide IP addresses instead of hostnames. If a machine
 
 Important tip #2: Clients requests should not be issued before all replicas in the initial view have been properly initialized (or at least a quorum of them). 
 
+Important tip #3: Never forget to delete the 'config/currentView' file after you modify 'config/hosts.config' or 'config/system.config'. If 'config/currentView' exists, FreeStore always fetches the initial view from this file. Otherwise, FreeStore fetches information from the other files and creates 'config/currentView' from scratch. Note that 'config/currentView' stores information related to the current view and also is updated by a reconfiguration.
+
+
 You can run the microbenckmarks demonstration by executing the following commands, from within the main folder:
 
 - Start the servers (3 replicas to tolerate up to 1 crash failure)
