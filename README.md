@@ -1,7 +1,7 @@
 FreeStore V0
 ----------
 
-This package contains the FreeStore source code (src/), binary file (build/ and dist/), libraries needed (lib/), running script (run.sh), Netbeans project configuration (nbproject/) and configuration files (config/).
+This package contains the FreeStore source code (src/), binary file (build/ and dist/), libraries needed (lib/), running scripts (run.sh, runABDFreeStoreServer.sh and runABDFreeStoreClientMicrobenckmarks.sh), netbeans project configuration (nbproject/) and configuration files (config/).
 
 
 ------ FreeStore Overview-----------------------
