@@ -34,11 +34,11 @@ Important tip #2: Clients requests should not be issued before all replicas in t
 You can run the microbenckmarks demonstration by executing the following commands, from within the main folder:
 
 - Start the servers (3 replicas to tolerate up to 1 crash failure)
-  - For consensus-based reconfigurations:
+  - For consensus-based reconfigurations (./runABDFreeStoreServer.sh \<server id>): 
     - ./runABDFreeStoreServer.sh 1 
     - ./runABDFreeStoreServer.sh 2
     - ./runABDFreeStoreServer.sh 3
-   - For consensus-free reconfigurations:
+   - For consensus-free reconfigurations (./runABDFreeStoreServer.sh \<server id> live):
     - ./runABDFreeStoreServer.sh 1 live
     - ./runABDFreeStoreServer.sh 2 live
     - ./runABDFreeStoreServer.sh 3 live
