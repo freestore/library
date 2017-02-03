@@ -11,9 +11,31 @@ Quorum systems are useful tools for implementing consistent and available storag
 FreeStore is a dynamic variant of these systems and consists of a set of fault-tolerant protocols that emulates a register in dynamic asynchronous systems in which processes are able to join/leave the servers set at runtime. These protocols use a new abstraction called view generators, that captures the agreement requirements of reconfiguration and can be implemented in different system models with different properties, i.e., Freestore protocols are tunable to execute consensus-based or consensus-free reconfigurations. Consequently, the reconfiguration protocol that is modular, efficient, tunable (consensus-free or consesus-based) and loosely coupled with read/write protocols, improving the overall system performance.
 
 
+------ Implementing/Adapting a static quorum system protocol to dynamic execution -----------------------
+
+FreeStore reconfiguration protocols work with any existing static quorum system protocol, i.e., it could be used to adapt these protocols for dynamic execution. In the current version, we provide the implementation/adaptation of the static ABD quorum system protocol (src/freestore/abd/).
+
+  - Server-side: it is necessary to extend the freestore.FreeStoreReplica class and to supply the replica id and the type of view generator to be used (the safe consensus-based or the live consensus-free).
+  - Client-side: it is necessary to extend the quorum.core.QuorumSender class (suplies the methods to multicast a message and to receive the replies from the servers in the current view) and to implement the  quorum.QuorumSystem interface (suplies the methods to write and read the register value that must be implemented according with the static protocol).
+
 ------ How to run FreeStore -----------------------
 
-To be completed
+
+To run any demonstration you first need to configure FreeStore to define the protocol behavior and the location of each replica.
+
+1.) The servers of the initial view must be specified in the configuration file (see 'config/hosts.config'). An example:
+
+#server id, address and port 
+0 127.0.0.1 11000
+1 127.0.0.1 11010
+2 127.0.0.1 11020
+
+
+Important tip #1: Always provide IP addresses instead of hostnames. If a machine running a replica is not correctly configured, FreeStore may fail to obtain the proper IP address and use the loopback address instead (127.0.0.1). This phenomenom may prevent clients and/or replicas from successfully establishing a connection among them.
+
+Important tip #2: Clients requests should not be issued before all replicas have been properly initialized (or at least a quorum of them). 
+
+2.) The system initial view must be specified in the file 'config/system.config'. A server that is not in the current view will ask for a join in the system. Afterward, a server could leave the system by executing the method "leave" provided by the freestore.FreeStoreReplica class that it must extends. 
 
 
 
