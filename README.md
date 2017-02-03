@@ -39,9 +39,9 @@ You can run the microbenckmarks demonstration by executing the following command
     - ./runABDFreeStoreServer.sh 2
     - ./runABDFreeStoreServer.sh 3
    - For consensus-free reconfigurations (./runABDFreeStoreServer.sh \<server id> live):
-    - ./runABDFreeStoreServer.sh 1 live
-    - ./runABDFreeStoreServer.sh 2 live
-    - ./runABDFreeStoreServer.sh 3 live
+      - ./runABDFreeStoreServer.sh 1 live
+      - ./runABDFreeStoreServer.sh 2 live
+      - ./runABDFreeStoreServer.sh 3 live
     
 - Start the client
   - ./runABDFreeStoreClientMicrobenckmarks.sh \<num. threads/clients> \<init process id> \<number of operations> \<value size> \<interval>
