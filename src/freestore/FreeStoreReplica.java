@@ -120,14 +120,14 @@ public abstract class FreeStoreReplica extends QuorumReplica implements ReplyRec
             }
         }, recPeriod, recPeriod);
 
-        (new Timer()).scheduleAtFixedRate(new TimerTask() {
+        /*(new Timer()).scheduleAtFixedRate(new TimerTask() {
          public void run() {
          if(id != 1){
          System.out.println("vai enviar o leave");
          leave();
           }
          }
-         }, recPeriod*2, recPeriod*50);
+         }, recPeriod*2, recPeriod*50);*/
     }
 
     public abstract int getTimestamp();

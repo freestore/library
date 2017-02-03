@@ -23,7 +23,12 @@ public class ABDFreeStoreServer extends FreeStoreReplica {
    
 
     public ABDFreeStoreServer(int id) {
-        super(id,ViewGeneratorType.SAFE);
+        this(id,ViewGeneratorType.SAFE);
+    }
+    
+    public ABDFreeStoreServer(int id, ViewGeneratorType vgt) {
+         super(id,vgt);
+        
     }
 
     public QuorumMessage executeProtocolRequest(QuorumMessage msg) {
@@ -83,11 +88,15 @@ public class ABDFreeStoreServer extends FreeStoreReplica {
     public static void main(String[] args) {
 
         if (args.length < 1) {
-            System.out.println("Usage: ... ABDFreeStoreServer <process id>");
+            System.out.println("Usage: ... ABDFreeStoreServer <process id> <View Generator Type (optional)>");
             System.exit(-1);
         }
-
-        new ABDFreeStoreServer(Integer.parseInt(args[0]));
+        if(args.length > 1 && args[1].equalsIgnoreCase("live")){
+            
+            new ABDFreeStoreServer(Integer.parseInt(args[0]),ViewGeneratorType.LIVE);
+        }else{
+            new ABDFreeStoreServer(Integer.parseInt(args[0]));
+        }
     }
 
 }
