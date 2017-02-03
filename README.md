@@ -19,7 +19,7 @@ To be completed
       - http://link.springer.com/chapter/10.1007%2F978-3-642-33651-5_49 (Brief Announcement at DISC 2012)
       - http://ieeexplore.ieee.org/document/6927130/ (portuguese -- published at SBRC 2014)
    
-  - Paper describing Mateus Braga GoLang implementation of FreeStore: 
+  - Papers describing Mateus Braga GoLang implementation of FreeStore: 
       - http://sbrc2014.ufsc.br/anais/files/wtf/ST2-4.pdf (portuguese -- published at WTF 2014)
       - http://bdm.unb.br/bitstream/10483/8130/1/2014_MateusAntunesBraga.pdf (portuguese -- Mateus Braga's Bachelor's thesis 2014)
 
