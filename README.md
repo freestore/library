@@ -29,7 +29,25 @@ Important tip #1: Always provide IP addresses instead of hostnames. If a machine
 
 2.) The system initial view must be specified in the file 'config/system.config'. A server that is not in the current view will ask for a join in the system. Afterward, a server could leave the system by executing the method "leave" provided by the freestore.FreeStoreReplica class that it must extends. 
 
-Important tip #2: Clients requests should not be issued before all replicas have been properly initialized (or at least a quorum of them). 
+Important tip #2: Clients requests should not be issued before all replicas in the initial view have been properly initialized (or at least a quorum of them). 
+
+You can run the microbenckmarks demonstration by executing the following commands, from within the main folder:
+
+- Start the servers (3 replicas to tolerate up to 1 crash failure)
+  - For consensus-based reconfigurations:
+    - ./runABDFreeStoreServer.sh 1 
+    - ./runABDFreeStoreServer.sh 2
+    - ./runABDFreeStoreServer.sh 3
+   - For consensus-free reconfigurations:
+    - ./runABDFreeStoreServer.sh 1 live
+    - ./runABDFreeStoreServer.sh 2 live
+    - ./runABDFreeStoreServer.sh 3 live
+    
+- Start the client
+  - ./runABDFreeStoreClientMicrobenckmarks.sh <num. threads/clients> <init process id> <number of operations> <value size> <interval>
+      - e.g.: ./runABDFreeStoreClientMicrobenckmarks.sh 5 7001 10 50 0 will start 5 clients (7001, 7002, 7003, 7004 and 7005) that will execute 5 operations to write/read (the client 7001 executes write operations while the others read the value from the register) a value of 50 bytes from the registers without any delay between the invocations.
+
+
 
 
 ------ Additional information and publications ------
