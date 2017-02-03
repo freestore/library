@@ -1,7 +1,7 @@
 FreeStore V0
 ----------
 
-This package contains the FreeStore source code (src/), binary file (bin/), libraries needed (lib/), running script (run.sh) and configuration files (config/).
+This package contains the FreeStore source code (src/), binary file (build/), libraries needed (lib/), running script (run.sh) and configuration files (config/).
 
 
 ------ FreeStore Overview-----------------------
