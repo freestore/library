@@ -7,13 +7,13 @@ To be completed
 
 
 
-- How to run FreeStore -----------------------
+------ How to run FreeStore -----------------------
 
 To be completed
 
 
 
-- Additional information and publications ------
+------ Additional information and publications ------
 
   - Papers describing FreeStore protocols: 
       - https://arxiv.org/pdf/1607.05344 (published at Arxiv 2016)
@@ -25,7 +25,7 @@ To be completed
       - http://bdm.unb.br/bitstream/10483/8130/1/2014_MateusAntunesBraga.pdf (portuguese -- Mateus Braga's Bachelor's thesis)
 
 
-- Other Implementations ------
+------ Other Implementations ------
 
   - Mateus Braga GoLang implementation of FreeStore: https://github.com/mateusbraga/freestore 
 
