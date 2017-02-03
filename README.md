@@ -23,20 +23,13 @@ FreeStore reconfiguration protocols work with any existing static quorum system 
 
 To run any demonstration you first need to configure FreeStore to define the protocol behavior and the location of each replica.
 
-1.) The servers of the initial view must be specified in the configuration file (see 'config/hosts.config'). An example:
-
-#server id, address and port 
-0 127.0.0.1 11000
-1 127.0.0.1 11010
-2 127.0.0.1 11020
-
+1.) The servers of the initial view must be specified in the configuration file (see 'config/hosts.config').
 
 Important tip #1: Always provide IP addresses instead of hostnames. If a machine running a replica is not correctly configured, FreeStore may fail to obtain the proper IP address and use the loopback address instead (127.0.0.1). This phenomenom may prevent clients and/or replicas from successfully establishing a connection among them.
 
-Important tip #2: Clients requests should not be issued before all replicas have been properly initialized (or at least a quorum of them). 
-
 2.) The system initial view must be specified in the file 'config/system.config'. A server that is not in the current view will ask for a join in the system. Afterward, a server could leave the system by executing the method "leave" provided by the freestore.FreeStoreReplica class that it must extends. 
 
+Important tip #2: Clients requests should not be issued before all replicas have been properly initialized (or at least a quorum of them). 
 
 
 ------ Additional information and publications ------
