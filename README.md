@@ -56,6 +56,7 @@ You can run the microbenckmarks demonstration by executing the following command
 ------ Additional information and publications ------
 
   - Papers describing FreeStore protocols: 
+      - Efficient and Modular Consensus-Free Reconfiguration for Fault-Tolerant Storage (OPODIS 2017)
       - https://arxiv.org/pdf/1607.05344 (published at Arxiv 2016)
       - http://link.springer.com/chapter/10.1007%2F978-3-642-33651-5_49 (Brief Announcement at DISC 2012)
       - http://ieeexplore.ieee.org/document/6927130/ (portuguese -- published at SBRC 2014)
